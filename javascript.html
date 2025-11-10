@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+		#owin{
+		width: 650px;
+		height: 400px;
+		position: absolute;
+
+		background-image: url(https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUya2I0Ymw0Mm5wc3lobGg4ZGRhMGRvbjQ3Y25zN2ExaHozdzVmYzNzZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l4FGjGwafkagUqj28/giphy.gif);
+		background-size: contain;
+		background-repeat: no-repeat;
+		}
+
+	</style>
+</head>
+<body>
+	<div> he lost his skate blade! help him get off the ice by typing.
+<div id="owin"></div>
+
+	<script type="text/javascript">
+
+
+			let owin = document.getElementById("owin")
+			owin.style.left="0px"
+			// let owinLeft = owin.style.left
+
+			document.addEventListener("keypress", function(){
+				console.log(owin.style.left)
+				owin.style.left = parseInt(owin.style.left) + 10+"px"
+			
+
+
+			})
+	
+		// owin.style.backgroundImage="url()"
+
+	</script>
+
+</body>
+</html>
