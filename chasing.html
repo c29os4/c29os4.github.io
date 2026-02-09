@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#player{
+background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJcbYNjzKZcFUh0ssL2ccIiXMPd2baAE25LA&s);
+width:100px;
+height:200px;
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+
+
+		}
+
+
+
+	</style>
+</head>
+<body>
+<div id="player"></div>
+
+<script type="text/javascript">
+
+
+function move (){
+setInterva(move, 1000)
+player.style.top = Math.random()*1000+"px"
+player.style.left = Math.random()*1000+"px"
+
+
+mouse.addEvenListener("click", function(){
+	alert("got me, lets play again")
+})
+
+ </script>
+
+</body>
+</html>

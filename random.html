@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#nhl{
+			font-size: 50px;
+			color: skyblue;
+
+		}
+		body{
+			background-color:white;
+
+		}
+	</style>
+</head>
+<body>
+
+	<center>
+		<div id="nhl" your favorite nhl team is...
+	</center>
+
+<script type="text/javascript">
+
+let teams = [ "Boston Bruins", "Buffalo Sabres", "Detroit Red Wings","Florida Panthers", "Montreal Canadiens", "Ottawa Senators", "Tampa Bay Lightning", "Toronto Maple Leafs", "Carolina Hurricanes", "Columbus Blue Jackets", "New Jersey Devils", "New York Islanders", "New York Rangers", "Philadelphia Flyers", "Pittsburgh Penguins", "Washington Capitals", "Chicago Blackhawks", "Colorado Avalanche", "Dallas Stars", "Minnesota Wild", "Nashville Predators", "Saint Louis Blues", "Utah Mammoth (formerly Arizona Coyotes)", "Winnipeg Jets", "Anaheim Ducks", "Calgary Flames", "Edmonton Oilers", "Los Angeles Kings", "San Jose Sharks", "Seattle Kraken", "Vancouver Canucks", "Vegas Golden Knights" ]
+
+document.addEventListener("click", function()
+{
+	let x = Math.round(Math.random()*31)
+	console.log(x)
+	alert(teams[x])
+})
+
+	</script>
+</body>
+</html>

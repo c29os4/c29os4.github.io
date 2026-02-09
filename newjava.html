@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+	#crossbar{
+	width: 200px;
+	height:300px;
+	animation-name: click ;
+	animation-duration: .2s;
+	animation-iteration-count: infinite;
+	background-image: url(bardown.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+	@keyframes shake{
+
+		0%{
+			transform:rotate(-45deg);
+		}
+
+		50%{
+			transform: rotate(45deg);
+		}
+		100%{
+			transform: rotate(-45deg)
+
+</style>
+</head>
+<body>
+
+<div id="crossbar"></div>
+
+<script type="text/javascript">
+
+	crossbar.addEventListener("click", function(){
+		crossbar.style.animationName="shake"
+
+	})
+</script>
+
+<body>
+</html>

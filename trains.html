@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+<style>
+	#train {
+display: flex;
+gap: 23px;
+	}
+
+	.cart{
+
+		border: 1px solid black;
+		min-width: 100px;
+		height: 80px;
+		text-align: center;
+		position:relative;
+
+	}
+
+	.cart:before{
+		content:"";
+		width:30px;
+		height:30px;
+		border:1px solid black;
+		display:block;
+		border-radius:50%;
+		position:absolute;
+		bottom: -25px;
+		background-color: white;
+
+	}
+
+	.cart:after {
+		content: "";
+		width:30px;
+		height:30px;
+		border:1px solid black;
+		display:block;
+		border-radius:50%;
+		position:absolute;
+		bottom: -25px;
+		right: 0;
+		background-color: white;
+	}
+
+</style>
+	
+</head>
+<body>
+
+	<button id = "add-friend">add friend</button>
+	<button id = "remove-last-friend">remove  last friend</button>
+	<input type="text" name="friend" id="friend">
+	<div id="train">
+		<div class="cart">owen</div>
+		<div class="cart">evan</div>
+		<div class="cart">jamie</div>
+
+	<script>
+		
+		let friends = ["evan", "kobi", "jamie", "owen"]
+		let train = document.getElementById("train")
+		people[0] people [1] people [2]
+		for(let i = 0; 1 < 4; i++){
+			console.log(friends[i])
+		}
+
+		friends.push("austin")
+		friends.push("owen")
+		console.log(friends)
+		let lastFriend = friends.pop()
+		console.log(lastFriend)
+		let removeLastFriendBtn =  document,getElementById = ("removeLastFriendBtn")
+		let addFriendBtn = document.getElementById("add-friend")
+
+		let cart = document.createElement("div")
+		car.classList.add("cart")
+		cart.textContent = friends
+		document.body.appendChild(cart)
+
+		addFriendBtn.addEventListener ("click", function()
+		{
+			makeTrain()
+			let friendInput = document.getElementById("friend")
+			console.log(friendInput)
+
+			makeTrain()
+			friends.push(friendInput.value)
+			console.log(friend)
+
+
+		})
+
+		removeLastFriendBtn.addEventListener("click", function (){
+			
+			console.log(friend)
+
+		})
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+	.littles{
+		width: 15px;
+		height: 15px;
+		border: 1px solid black;
+		display: inline-block;
+		position: absolute;
+		animation-name:swing;
+		animation-duration:3s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+
+
+	}
+	@keyframes swing {
+		form {
+			transform: rotate(var(--startRot));
+		}
+		to {
+			transform: rotate(var(--endRot));
+		}
+	}
+	}
+	@keyframes swing3d {
+		form {
+			transform: rotateY(-180deg);
+		}
+		to {
+			transform: rotateY(180deg);
+		}
+	}
+	</style>
+</head>
+<body>
+	<button id= "btn">drop confetti</button>
+	<input type="color" value="#ff0000" id="colorPicker" >
+<script type="text/javascript">
+
+
+let colors = ["#384E77", "#8BBEB2", "#18314F", "#0D0630"]
+let friends = ["kobi", "matthew", "sebastian"]
+
+
+console.log (colors.length)
+
+
+
+
+function makeConfetti (){
+	let confetti = document.createElement("div")
+	confetti.classList.add("littles")
+	document.body.appendChild(confetti)
+
+		let r= Math.round(Math.random()*255)
+	let g= Math.round(Math.random()*255)
+	let b= Math.round(Math.random()*255)
+	let rotation = Math.random() * 360
+
+	// let startRot = Math.floor(Math.random() * colors.length)
+
+	let startRot = Math.random() *  -60 + "deg"
+	let endRot = Math.random() *  60 + "deg"
+	confetti.style.setProperty("--startRot", startRot)
+	confetti.style.setProperty("--endRot", endRot)
+
+	//confetti.style.backgroundColor ="rgb(" + r + "," + g + "," + b +")"
+	//
+confetti.style.top = Math.random() * 1000 + "px"
+confetti.style.left = Math.random() * 2000 + "px"
+confetti.style.transform = "rotate("+rotation+"deg)"
+
+let randomColorIndex = Math.floor(Math.random() * colors.length) 
+confetti.style.backgroundColor = colorPicker.value
+//console.log(randomColorIndex)
+
+//confetti.style.backgroundColor = colors [randomColorIndex]
+function fall() {
+	let fallFactor = 10
+	confetti.style.top = parseInt(confetti.style.top) + fallFactor + "px"
+
+}
+	setInterval(fall, 50)
+}
+
+
+
+ 
+//setInterval(makeConfetti, 0.000001)
+
+let dropConfettiBtn = document.getElementById("btn")
+dropConfettiBtn.addEventListener("click", function(){
+	for(let i = 0; i < 10; i++)
+		makeConfetti()
+})
+let colorPicker = document.getElementById("colorPicker")
+console.log(colorPicker)
+</script>
+<body>
+</html>
