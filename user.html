@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#badbutton {
+			position: absolute;
+			font-size: 70px;
+		}
+	</style>
+</head>
+<body>
+<button id = "badbutton"> dont click me!</button>
+
+</body>
+<script>
+console.log(window.innerWidth)
+	// button variable
+ let badbutton = document.getElementById("badbutton")
+ console.log(badbutton)
+ badbutton.addEventListener("click", function(){console.log("click")
+})
+  badbutton.addEventListener("mouseover", function(){console.log("mouse is over")
+  	badbutton.style.top = Math.random() * window.innerWidth + "px"
+  	badbutton.style.left = Math.random() * window.innerHeight + "px"
+})
+  badbutton.addEventListener("mouseout", function(){console.log("mouse leaves")
+ })
+</script>
+</html>
